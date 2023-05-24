@@ -7,7 +7,7 @@ JTextArea textArea;
 JButton wordCounterButton,characterCounterButton;  
 WordCounterApp(){  
     super("Word Character Counter");  
-    textArea=new JTextArea("Herhangi bir metin giriniz.");
+    textArea=new JTextArea("Herhangi bir metin giriniz.",10,10);
     
     textArea.setBounds(50,50,300,200);  
       
@@ -28,13 +28,13 @@ WordCounterApp(){
     setVisible(true);  
 }  
 public void actionPerformed(ActionEvent e){  
-    String ınputText=textArea.getText();  
+    String inputText=textArea.getText();  
     if(e.getSource()==wordCounterButton){  
-        String wordsINtext[]=ınputText.split("\\s");  
+        String wordsINtext[]=inputText.split("\\s");  
         JOptionPane.showMessageDialog(this,"Kelime adedi: "+wordsINtext.length);  
     }  
     if(e.getSource()==characterCounterButton){  
-        JOptionPane.showMessageDialog(this,"Karakter adedi(boşluklar dahil.): "+ınputText.length());  
+        JOptionPane.showMessageDialog(this,"Karakter adedi(boşluklar dahil.): "+inputText.length());  
     }  
 }  
 public static void main(String[] args) {  
